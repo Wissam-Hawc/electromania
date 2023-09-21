@@ -1,0 +1,170 @@
+/*--------------ACCOUNT-page----------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    scrollbar-width: none;
+}
+.account-page{
+    padding: 50px;
+    
+}
+
+
+.form-container{
+    background: white;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1 ) ;
+    overflow: hidden;
+    border-radius: 10%;
+    
+}
+.form-container span{
+    font-weight: bold;
+    padding: 10px;
+    color: #555;
+    display: inline-block;
+    width: 100px;
+    cursor: pointer;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 80px;
+    bottom: 80px;
+    transition: transform 1s;
+}
+form input{
+    width: 85%;
+    height: 30px;
+    margin: 10px 0 ;
+    padding: 0 10px;
+    border: 0px;
+    border-bottom: 2px solid rgb(204, 204, 204);
+    text-align: left;
+    outline: 0ch;
+}
+form .btn{
+    width: 90%;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
+   background-color: #0a52a6;
+   color: #fff;
+}
+form .btn :focus{
+    outline: none;
+
+}
+#loginform{
+    left: -300px;
+}
+#registerform{
+    left: 0;
+}
+form a{
+    font-size: 12px;
+}
+#indicator{
+    width: 100px;
+    border: none;
+    background: #0a52a6;
+    height: 3px;
+    margin-top: 8px;
+    transform: translatex(100px);
+    transition: transform 1s; 
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+    
+}
+.col-2 img{
+    border-radius: 10%;
+    width: 85%;
+    max-width: 100%;
+    padding: 50px 0;
+    box-shadow: 0 0 20px 0px rgb(169, 176, 247);
+    
+    transition: transform 0.5s;
+}
+
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background: #0a52a6;
+    color: black;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 10px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #0d2e5c;
+}
+/*responsive*/
+
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+@media only screen and ( max-width:800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background:#333 ;
+        width: 100px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+@media only screen and ( max-width:600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3 , .col-4{
+        flex-basis: 100%;
+
+    }
+}

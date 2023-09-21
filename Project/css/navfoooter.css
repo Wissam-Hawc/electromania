@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+body {
+    user-select: text;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Disable text selection during scrolling */
+  body.scrolling {
+    user-select: none;
+  }
+  
+  /* To style the scrollbar, you can adjust these styles as per your preference */
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.container{
+    max-width: 1300px;
+    margin:auto;
+    padding-left : 25px;
+    padding-right : 25px;
+    
+}
+.nav-color{
+    background:linear-gradient(to bottom, #0056b3, #1c4a8c);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 27px;
+    
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+
+    display: inline-block;
+    list-style-type: none;
+    
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 31px; 
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+/* the lines on the nav */
+nav ul li a {
+    position: relative;
+  }
+  
+  nav ul li .anav::before,
+  nav ul li .anav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color:white;
+    transition: transform 0.9s ease;
+  }
+  
+  nav ul li .anav::before {
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  
+  nav ul li .anav::after {
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  nav ul li .anav:hover::before,
+  nav ul li .anav:hover::after {
+    transform: scaleX(1);
+  }
+
+
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 30px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 100%;
+            /* Position the dropdown below the main button */
+            left: 0;
+            /* Align the dropdown with the left side of the main button */
+        }
+
+        /* Dropdown items */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 6px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            font-size: small;
+        }
+
+        /* Change color on hover */
+        .dropdown-content a:hover {
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Show the dropdown content when the main button is hovered */
+        .dropdown:hover .dropdown-content {
+            display: block;
+            cursor: pointer;
+            animation: slideIn 0.9s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column; /* Stack items vertically on small screens */
+                align-items: flex-start; /* Align items to the left on small screens */
+                padding: 10px;
+            }
+        
+            nav {
+                text-align: left;
+                margin-top: 0; /* Reset margin for better alignment */
+            }
+        
+            nav ul li {
+                margin-bottom: 5px; /* Reduce spacing between nav items */
+            }
+        }
+
+
+  
+  /* end */
+  .footer{
+    background:linear-gradient(to bottom, #1c4a8c, #0056b3);
+    font-size: 14px;
+    color: white;
+    padding: 60px ;
+    margin-bottom: auto;
+}
+.footer p{
+    color: white;
+}
+footer h3{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 15%;
+}
+.footer-col-3,.footer-col-4, .footer-col-2{
+    flex-basis: 15%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.app-whats img{
+    width: 120px;
+}
+.footer-col-3 ul{
+    list-style-type: none;
+}
+.footer hr{
+    border: none;
+    height: 0.5px;
+    margin: 20px 0;
+    background:white;
+}
+
+.copyright{
+    text-align: center;
+    color:white;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+
+@media only screen and ( max-width:600px){
+    .row{
+        text-align: center;
+    }
+    .col-1, .col-2, .col-3 , .col-4{
+        flex-basis: 100%;
+
+    }
+}
